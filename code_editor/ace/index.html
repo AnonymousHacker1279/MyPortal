@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,height=device-height" />
+    <title>Code Editor</title>
+    <!--
+    Ace
+      version 1.4.5
+      commit  
+    -->
+    <!--Thanks to Ace, for allowing this editor to work-->
+
+    <link rel="stylesheet" href="demo/kitchen-sink/styles.css" type="text/css" media="screen" charset="utf-8">
+    
+    <script async="true" src="https://use.edgefonts.net/source-code-pro.js"></script>
+    
+
+    <link href="./doc/site/images/favicon.ico" rel="icon" type="image/x-icon">
+</head>
+<body>
+<div  style="position:absolute;height:100%;width:260px">
+  <div id="optionsPanel" style="width: 120%; height:100%; overflow-y: scroll">
+
+  
+  <a href="https://ace.c9.io">
+    <img id="ace-logo" src="demo/kitchen-sink/ace-logo.png" style="width: 134px;margin: 46px 0px 4px 66px;">
+  </a>
+
+  </div>
+  </div>
+</div>
+  <div id="editor-container"></div>
+
+
+
+
+  <script src="src/ace.js" data-ace-base="src" type="text/javascript" charset="utf-8"></script>
+  <script src="src/keybinding-vim.js"></script>
+  <script src="src/keybinding-emacs.js"></script>
+  <script src="demo/kitchen-sink/demo.js"></script>
+  <script type="text/javascript" charset="utf-8">
+    require("kitchen-sink/demo");
+  </script>
+    
+
+</body>
+</html>
