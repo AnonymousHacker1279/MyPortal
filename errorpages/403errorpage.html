@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>403 Error</title>
+    <link rel="stylesheet" href="../style001.css" />
+    <script>
+        function ReturnToIndex() {
+            window.location.replace("../index.html");
+        }
+    </script>
+</head>
+<body style="background-color:azure">
+    <h1 style="text-align:center">You shouldn't be here...</h1>
+    <h2 style="text-align:center">This place isn't supposed to be seen.</h2>
+    <br />
+    <img src="403error.png" alt="error404" style="margin:0 auto; display:block" />
+    <br />
+    <button onclick="ReturnToIndex()" type="button" class="ActionButton">Go back to MyPortal</button>
+    <br />
+    <p style="text-align:center">Error Information: HTTP 403 Access Denied</p>
+    <p style="text-align:center">This means you probably typed in the wrong URL, and ended up in a protected directory.</p>
+</body>
+</html>
