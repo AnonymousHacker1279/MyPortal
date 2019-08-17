@@ -117,7 +117,7 @@ function showSlides(n) {
 </script>
 
 <p style="text-align:right;">MyPortal Version <?php echo $version; ?></p>
-<p style="text-align:right;"><a href="../about/index.html"><img src="help24.png" /></a>About MyPortal</p>
+<p style="text-align:right;"><a href="../about/index.html"><img src="../help24.png" /></a>About MyPortal</p>
 
 <br />
 </body>
