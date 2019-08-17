@@ -19,7 +19,7 @@ $id = $_SESSION['id'];
 	<link rel="stylesheet" href="../style001.css">
 	<script>
 		function MoveToAccountDeleteBackend() {
-			window.location.href("deleteaccountbackend.php");
+			window.location("deleteaccountbackend.php");
 		}
 	</script>
 </head>
