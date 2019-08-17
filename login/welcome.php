@@ -25,7 +25,7 @@ fclose($version);
 		<div class="centered" style="font-size:50px">Welcome to MyPortal, <?php echo $username; ?></div>
     </div>
 
-	<ul style="background-color:<?php echo $favcolor; ?>;">
+	<ul>
 		<li><a href="welcome.php">Home</a></li>
 		<li><a href="/dashboard/dashboard.php">Dashboard</a></li>
 		<li style="float:right"><a href="logout.php"><img src="../logout.png" alt="logout" style="vertical-align:middle"/>Log Out</a></li>
@@ -115,6 +115,9 @@ function showSlides(n) {
 }
 
 </script>
+
+<p style="text-align:right;">MyPortal Version <?php echo $version; ?></p>
+<p><a href="../about/index.html">About MyPortal</a></p>
 
 <br />
 </body>
