@@ -81,24 +81,10 @@ $tmpusername = $_POST["username"];
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
-				GetFavColor();
+		header ("location: login.php");
             } else{
                 echo "Something went wrong. Please try again later.";
-            }
-
-			//Set a default favorite color
-			//NEEDS FIXED - Needs to put color next to user ID!
-			function GetFavColor() {
-				$last_id = mysqli_insert_id($link);
-				$defaultcolor = "#333";
-				$sql = "INSERT INTO users (favcolor) VALUES ('$defaultcolor') WHERE id='$last_id'";
-	
-				if (mysqli_query($link, $sql)) {
-					header("location: login.php");
-				} else {
-					echo "Error: " . $sql . "<br>" . mysqli_error($link);
-				}
-			}
+           }
         }
 
         // Close statement
