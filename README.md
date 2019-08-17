@@ -14,6 +14,7 @@ If you are an administrator and wish to make changes to the configuration of MyP
 
 You will have to add Rewrite Rules to your configuration file in the Apache Virtual Host to redirect all visitors to the maintenance page.
 You can do it with the following Rewrite Rules:
+    
     RewriteEngine On
     RewriteCond %{REMOTE_ADDR} !^123\.456\.789\.000
     RewriteCond %{DOCUMENT_ROOT}/maintenance.html -f
@@ -29,6 +30,7 @@ Then reload Apache to apply the new settings with *apachectl graceful*.
 You can enable automatic updates by creating a bash script to pull new code to your server. 
 
 The script can look like this:
+
     #!/bin/sh
 
     cd /var/www/html  #Use your server directory here
