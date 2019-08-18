@@ -18,21 +18,21 @@ $username = $_SESSION['username'];
 </head>
 <body>
     <div class="container">
-        <img src="/code01.jpg" alt="code01" style="width:100%; height:180px; opacity: 0.4;" />
+        <img src="/icons/code01.jpg" alt="code01" style="width:100%; height:180px; opacity: 0.4;" />
         <div class="centered" style="font-size:50px">Your Account</div>
     </div>
 
 	<ul>
 		<li><a href="/login/welcome.php">Home</a></li>
 		<li><a href="/dashboard/dashboard.php">Dashboard</a></li>
-		<li style="float:right"><a href="../login/logout.php"><img src="../logout.png" alt="logout" style="vertical-align:middle"/>Log Out</a></li>
+		<li style="float:right"><a href="../login/logout.php"><img src="/icons/logout.png" alt="logout" style="vertical-align:middle"/>Log Out</a></li>
 		<li style="float:right;"><a href="accountdetails.php">Account</a></li>
 	</ul>
 
     <h2>Hello, <?php echo $username;?>. What yould you like to change today?</h2>
 
 	<div class="container">
-		<a href="login/resetpassword.php"><img src="passkey.png" alt="passkey" style="vertical-align: middle;" /></a>
+		<a href="login/resetpassword.php"><img src="/icons/passkey.png" alt="passkey" style="vertical-align: middle;" /></a>
 		<p style="vertical-align: middle;">Change Password</p>
     </div>
 
@@ -41,7 +41,7 @@ $username = $_SESSION['username'];
 	<br />
 
 	<div class="container">
-		<a href="login/deleteaccount.php"><img src="deleteaccount.png" alt="deleteaccount" style="vertical-align: middle;" /></a>
+		<a href="login/deleteaccount.php"><img src="/icons/deleteaccount.png" alt="deleteaccount" style="vertical-align: middle;" /></a>
 		<p style="vertical-align: middle;">Delete Account</p>
 	</div>
 

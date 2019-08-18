@@ -9,6 +9,8 @@ Dependencies: PHP 7+, Apache 2, MySQL
 # Setting Up MyPortal Users
 Setting up users with MyPortal is easy. New users can click on the "Login to MyPortal" button, and click "Sign Up" at the bottom of the page. If you need to prevent certain words or characters in usernames, edit the *register.php* file (The code is commented out). All users will have access to the same tools (like the File Manager), so each user gets access to the same files. However, another MyPortal server (for example, in another state) will not have access to those tools. Each server is independent from another.
 
+**Note: You need to create an SQL table on your server, and edit the values in the PHP scripts. Most of this can be done from the "config.php" script.**
+
 # Activating Maintenance Support
 If you are an administrator and wish to make changes to the configuration of MyPortal, please rename the "maintenance1.enable" file to "maintenance.enable", to activate the maintenance page.
 
@@ -33,14 +35,16 @@ The script can look like this:
 
     #!/bin/sh
 
-    cd /var/www/html  #Use your server directory here
+    cd /var/www/html  # Use your server directory here
 
     while true
     do
     git pull orgin master
-    sleep 30 #You can set any delay here (Remember, its in seconds). This is useful for a relatively real-time update, but values higher may be better for more traffic (To reduce bandwidth).
+    sleep 60 # You can set any delay here (Remember, its in seconds). This is useful for a relatively real-time update, but values higher may be better if you have more traffic
     done
 
 Use *chmod +x updatescript.sh* to make it executable
 
 Then you can use a *crontab* to make it run automatically.
+
+Using *crontab* is very simple and straightforward. Using *crontab -e* you can add a new cron job to be scheduled. Go to [this page] (https://www.pantz.org/software/cron/croninfo.html) for cron examples and syntax.

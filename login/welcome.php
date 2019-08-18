@@ -21,14 +21,14 @@ fclose($version);
 </head>
 <body>
 	<div class="container">
-		<img src="/code01.jpg" alt="code01" style="width:100%; height:180px; opacity: 0.4;" />
+		<img src="/icons/code01.jpg" alt="code01" style="width:100%; height:180px; opacity: 0.4;" />
 		<div class="centered" style="font-size:50px">Welcome to MyPortal, <?php echo $username; ?></div>
     </div>
 
 	<ul>
 		<li><a href="welcome.php">Home</a></li>
 		<li><a href="/dashboard/dashboard.php">Dashboard</a></li>
-		<li style="float:right"><a href="logout.php"><img src="../logout.png" alt="logout" style="vertical-align:middle"/>Log Out</a></li>
+		<li style="float:right"><a href="logout.php"><img src="/icons/logout.png" alt="logout" style="vertical-align:middle"/>Log Out</a></li>
 		<li style="float:right"><a href="../accountdetails.php">Account</a></li>
 	</ul>
 
@@ -64,8 +64,8 @@ fclose($version);
 
     <div class="mySlides fade">
 	<div class="numbertext">5 / 5</div><br /><br />
-	<img src="/slideshow/vm.png" style="width:100%">
-	<div class="text">Use online virtual machines as a sandbox or for testing programs</div>
+	<img src="/slideshow/MyPortal.png" style="width:100%">
+	<div class="text">Easy to use solution for team collaboration</div>
   </div>
 
   <!-- Next and previous buttons -->
@@ -117,7 +117,7 @@ function showSlides(n) {
 </script>
 
 <p style="text-align:right;">MyPortal Version <?php echo $version; ?></p>
-<p style="text-align:right;"><a href="../about/index.html"><img src="../help24.png" /></a>About MyPortal</p>
+<p style="text-align:right;"><a href="../about/index.html"><img src="/icons/help24.png" /></a>About MyPortal</p>
 
 <br />
 </body>
