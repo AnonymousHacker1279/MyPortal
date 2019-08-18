@@ -34,14 +34,8 @@ You can enable automatic updates by creating a bash script to pull new code to y
 The script can look like this:
 
     #!/bin/sh
-
     cd /var/www/html  # Use your server directory here
-
-    while true
-    do
     git pull orgin master
-    sleep 60 # You can set any delay here (Remember, its in seconds). This is useful for a relatively real-time update, but values higher may be better if you have more traffic
-    done
 
 Use *chmod +x updatescript.sh* to make it executable
 
