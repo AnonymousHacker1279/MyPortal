@@ -21,14 +21,14 @@ fclose($version);
 </head>
 <body>
 	<div class="container">
-		<img src="/icons/code01.jpg" alt="code01" style="width:100%; height:180px; opacity: 0.4;" />
+		<img src="/icon/code01.jpg" alt="code01" style="width:100%; height:180px; opacity: 0.4;" />
 		<div class="centered" style="font-size:50px">Welcome to MyPortal, <?php echo $username; ?></div>
     </div>
 
 	<ul>
 		<li><a href="welcome.php">Home</a></li>
 		<li><a href="/dashboard/dashboard.php">Dashboard</a></li>
-		<li style="float:right"><a href="logout.php"><img src="/icons/logout.png" alt="logout" style="vertical-align:middle"/>Log Out</a></li>
+		<li style="float:right"><a href="logout.php"><img src="/icon/logout.png" alt="logout" style="vertical-align:middle"/>Log Out</a></li>
 		<li style="float:right"><a href="../accountdetails.php">Account</a></li>
 	</ul>
 
@@ -117,7 +117,7 @@ function showSlides(n) {
 </script>
 
 <p style="text-align:right;">MyPortal Version <?php echo $version; ?></p>
-<p style="text-align:right;"><a href="../about/index.html"><img src="/icons/help24.png" /></a>About MyPortal</p>
+<p style="text-align:right;"><a href="../about/index.html"><img src="/icon/help24.png" /></a>About MyPortal</p>
 
 <br />
 </body>
