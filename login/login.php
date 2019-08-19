@@ -64,14 +64,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
 							
-							//Get user's favorite color
-							$query = "SELECT 'favcolor' FROM 'users' WHERE id='$id'";
-							$result = mysqli_query($link, $query);
-
-							$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-							$_SESSION['test'] = $row['favcolor'];
-							
-
                             
                             // Redirect user to welcome page
                             header("location: welcome.php");
