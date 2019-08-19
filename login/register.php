@@ -17,6 +17,8 @@ $tmpusername = $_POST["username"];
     } /*
         Enable if you need to prevent certain characters or words in usernames.    
 
+        $tmpusername = $username;
+
         elseif(strpos($tmpusername, 'yourcharacter') !== false){
         $username_err = "A username cannot contain the following characters: yourcharacter";
         */ 
