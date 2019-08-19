@@ -70,7 +70,7 @@ $id = $_SESSION['id'];
 		
 		<!-- START CAPTCHA -->
 		<div class="container">
-		<form onsubmit="DisplayDeleteButton()">
+		<form method="post" action="deleteaccountbutton.php" onsubmit="return checkform(this);">
 		<br>
 		<div class="capbox">
 
@@ -85,6 +85,7 @@ $id = $_SESSION['id'];
 		</div>
 		</div>
 		<br><br>
+		</form>
 		<script type="text/javascript">
 
 			// Captcha Script
@@ -134,9 +135,6 @@ $id = $_SESSION['id'];
 			</script>
 			</div>
 		<!-- END CAPTCHA -->
-		<div id="DeleteAccountButton" style="display:none;">
-		<button onclick="MoveToAccountDeleteBackend()" type="button">DELETE ACCOUNT</button>
-		</div>
 	</div>
 </body>
 </html>
