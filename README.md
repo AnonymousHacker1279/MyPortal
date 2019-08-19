@@ -7,10 +7,10 @@ Dependencies: PHP 7+, Apache 2, MySQL
 
 Recommended Computer Specs:
 
-1 GHz Processor Clock Speed
-512 MB RAM
-32 GB Storage *
-5 MB/s Network Speed (NOT internet speed! Network speed is between your computer and the router)
+- 1 GHz Processor Clock Speed
+- 512 MB RAM
+- 32 GB Storage *
+- 5 MB/s Network Speed (NOT internet speed! Network speed is between your computer and the router)
 
 These values should be increased if there are plenty of users. For 1-5 users, this is enough.
 
@@ -55,12 +55,14 @@ Using *crontab* is very simple and straightforward. Using *crontab -e* you can a
 for cron examples and syntax.
 
 # Enable Custom Error Pages
-Sometimes, a user might type in a URL which doesn't exist, causing a HTTP 404 error. Apache's default can be useful, but doesn't always look professional. Other times, you might accidentally hit a protected directory, causing an HTTP 403 error. Anyway, we have some covered.
+Sometimes, a user might type in a URL which doesn't exist, causing a HTTP 404 error. Apache's default can be useful, but doesn't always look professional. Other times, you might accidentally hit a protected directory, causing an HTTP 403 error. Anyway, there are some already covered.
 
-We have made three custom error pages (HTTP Errors: 403, 404, and 500 (NOTE: Some 500 errors, like in PHP, don't actually send a 500 error, and so the page won't appear)).
-You change these, or make new ones, just keep the name or edit the ".htaccess" files. We only have three right now because these are the most common.
+There are three custom error pages (HTTP Errors: 403, 404, and 500 (NOTE: Some 500 errors, like in PHP, don't actually send a 500 error, and so the page won't appear)).
+You change these, or make new ones, just keep the name or edit the ".htaccess" files. There are only three right now because these are the most common.
 
 If you decide to make new ones, you MUST add them to the ".htaccess" files! Otherwise, they won't activate when a user gets an error.
 
 # Suggestions and Issues
-If have your own suggestions, please make a pull request
+If have your own suggestions, please make a pull request, and it may get implemented.
+
+For other issues, please make an issue and describe it, with the files affected. You can create your own pull requests with fixes.
