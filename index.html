@@ -10,12 +10,116 @@
             document.getElementById("HiddenDiv").style.display = "";
         }
     </script>
+    <style>
+    * {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+    </style>
 </head>
 <body>
     <div class="container">
         <img src="icon/code01.jpg" alt="code01" style="width:100%; height:180px; opacity: 0.4;" />
         <div class="centered">Welcome to MyPortal!</div>
     </div>
+
+    <br />
+
+    <!--More Information Popup-->
+
+    <button class="open-button" onclick="openForm()" id="infobutton">More information</button>
+
+    <div class="form-popup" id="moreinfo">
+        <p>The testing branch isn't intended for use, with a few exceptions:</p>
+        <ul>
+            <li>You are an administrator, and are editing features that are experimental, and shouldn't be in the mainstream release yet</li>
+            <li>You want to see potential new features before they come to the mainstream</li>
+        </ul>
+        <p>It is possible that some features in the testing branch will be removed in the future, and never be worked on again.</p>
+        <p>It is also possible that in the near future that the features will come to the main branch.</p>
+        <br />
+        <p>It isn't recommended to add this branch to an auto-update script. It may break features that you are working on yourself, if you are using this test branch.</p>
+        <br />
+        <button type="button" class="btn cancel" onclick="closeForm()">Close Information Box</button>
+    </form>
+    </div>
+
+    <script>
+    function openForm() {
+        document.getElementById("moreinfo").style.display = "block";
+        document.getElementById("infobutton").style.display = "none";
+    }
+
+    function closeForm() {
+        document.getElementById("moreinfo").style.display = "none";
+        document.getElementById("infobutton").style.display = "block";
+    }
+    </script>
+
+    <!--End More Information Popup-->
+
+    <br />
 
     <h2>Easily collaborate with others and move files across devices with ease</h2>
 
