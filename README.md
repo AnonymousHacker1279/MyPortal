@@ -1,4 +1,4 @@
-#MyPortal Test Branch
+# MyPortal Test Branch
 You are currently in the testing branch of MyPortal.
 
 Features here may break or disappear completely. Or, they may be added to the main branch in a future release.
@@ -8,7 +8,7 @@ It isn't recommended to add this branch to an auto-update script, because it can
 
 When you want a new version of the testing branch, clone it into a different directory. Then you can access that directory, like this: yourdomain.com/TEST_BRANCH
 
-#Shared-Database Issue
+# Shared-Database Issue
 *If you download this without editing anything, and run it, you could possibly destroy your entire SQL database!*
 
 The database configuration is set to the *same default* as the main branch! If this happens to be your configuration setup (which it shouldn't), you can damage your actual user database.
