@@ -22,11 +22,11 @@ $username = $_SESSION['username'];
         <div class="centered" style="font-size:50px">Your Account</div>
     </div>
 
-	<ul>
-		<li><a href="/login/welcome.php">Home</a></li>
-		<li><a href="/dashboard/dashboard.php">Dashboard</a></li>
-		<li style="float:right"><a href="../login/logout.php"><img src="/icon/logout.png" alt="logout" style="vertical-align:middle"/>Log Out</a></li>
-		<li style="float:right;"><a href="accountdetails.php">Account</a></li>
+	<ul class="NavBar">
+		<li class="NavBarItem"><a href="/login/welcome.php">Home</a></li>
+		<li class="NavBarItem"><a href="/dashboard/dashboard.php">Dashboard</a></li>
+		<li class="NavBarItem" style="float:right"><a href="../login/logout.php"><img src="/icon/logout.png" alt="logout" style="vertical-align:middle"/>Log Out</a></li>
+		<li class="NavBarItem" style="float:right;"><a href="accountdetails.php">Account</a></li>
 	</ul>
 
     <h2>Hello, <?php echo $username;?>. What yould you like to change today?</h2>
