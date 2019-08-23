@@ -24,7 +24,6 @@
 /* The popup form - hidden by default */
 .form-popup {
   display: none;
-  position: fixed;
   border: 3px solid #f1f1f1;
   z-index: 9;
 }
@@ -46,10 +45,12 @@
 
     <!--More Information Popup-->
 
-    <button class="open-button" onclick="openForm()" id="infobutton">More information</button>
-
     <div class="container">
     <h2>WARNING! You are on the test branch for MyPortal! See the button below for more information.</h2>
+
+      <br />
+
+    <button class="open-button" onclick="openForm()" id="infobutton">More information</button>
 
       <div class="form-popup" id="moreinfo">
           <h2>If you accidentally got here, you may want to leave. The pages here are unstable and highly subject to change. It is even possible for your administrator to be editing this right now.</h2>
