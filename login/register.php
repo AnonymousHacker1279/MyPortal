@@ -101,9 +101,10 @@ $tmpusername = $_POST["username"];
                     echo "Result of mysqli_stmt_execute(): " . $result;
 
                     //DEBUG MODE    header("location: login.php");
-                } /*else {
-                    echo "Something went wrong. Please try again later.";
-                } */
+                } else {
+                    $result = mysqli_stmt_get_result($stmt);
+                    echo "Result of mysqli_stmt_execute(): " . $result;
+                } 
             } else{
                 echo "Something went wrong. Please try again later.";
            }
