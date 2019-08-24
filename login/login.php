@@ -64,9 +64,29 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
 							
-                            
-                            // Redirect user to welcome page
-                            header("location: welcome.php");
+                            //Here we should check if the user is new or not. If they are, then send them to the welcomenewuser.php page
+
+                                //Prepare a SELECT statement
+                                $sql = "SELECT isnewuser FROM users";
+
+                                //If the result returned is equal to one, they are a new user
+                                if (mysqli_query($link, $sql) == '1') {
+                                    //If they are new, go to the welcomenewuser.php page
+                                    //However, we need to set the isnewuser value to FALSE again, or else they will see this every time
+                                    $sql = "UPDATE users SET isnewuser='0' WHERE id='$id'";
+
+                                    if (mysqli_query($link, $sql)) {
+                                        //If it worked, then the user won't see the special welcome after this.
+                                        header("location: welcomenewuser.php");
+                                    } else {
+                                        echo "Error updating record: " . mysqli_error($link);
+                                    }
+
+                                } else {
+                                    //If not, they can go to the normal welcome page
+                                    header("location: welcome.php");
+                                }
+
                         } else{
                             // Display an error message if password is not valid
                             $password_err = "No account found with that username/password combination.";

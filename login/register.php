@@ -87,7 +87,18 @@ $tmpusername = $_POST["username"];
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
-		header ("location: login.php");
+                //If we get this far, the user has successfuly registered.
+                //So now we will set isnewuser to TRUE in the database, to display the welcomenewuser.php page
+                $sql = "INSERT INTO users isnewuser VALUES '1'";
+
+                if (mysqli_query($link, $sql)) {
+                    //If this worked, then when the user logs on they will be sent to the welcomenewuser.php page
+                    header ("location: login.php");
+                } else {
+                    //If it doesn't work, display an error
+                    echo "Error: " . $sql . "<br />" . mysqli_error($link);
+                }
+
             } else{
                 echo "Something went wrong. Please try again later.";
            }
