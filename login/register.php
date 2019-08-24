@@ -89,15 +89,20 @@ $tmpusername = $_POST["username"];
             if(mysqli_stmt_execute($stmt)){
                 //If we get this far, the user has successfuly registered.
                 //So now we will set isnewuser to TRUE in the database, to display the welcomenewuser.php page
-                $sql1 = "INSERT INTO users isnewuser VALUES ('1')";
 
-                if (mysqli_query($link, $sql1)) {
+                //Get ID of last inserted record (when the user made their account)
+                $last_inserted_id = mysqli_insert_id($link);
+
+                //Prepare select statement
+                $sql = "INSERT INTO users isnewuser VALUES ('1') WHERE id='$last_inserted_id'";
+
+                if (mysqli_query($link, $sql)) {
                     //Redirect the user to the login page
                     header("location: login.php");
                 } else {
                     echo "Something went wrong. Please try again later.";
                 } 
-            } else{
+            } else {
                 echo "Something went wrong. Please try again later.";
            }
         }

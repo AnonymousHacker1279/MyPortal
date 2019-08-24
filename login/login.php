@@ -67,7 +67,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             //Here we should check if the user is new or not. If they are, then send them to the welcomenewuser.php page
 
                                 //Prepare a SELECT statement
-                                $sql = "SELECT isnewuser FROM users";
+                                $sql = "SELECT isnewuser FROM users WHERE id='$id'";
 
                                 //If the result returned is equal to one, they are a new user
                                 if (mysqli_query($link, $sql) == '1') {
