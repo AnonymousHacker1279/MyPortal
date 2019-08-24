@@ -89,7 +89,7 @@ $tmpusername = $_POST["username"];
             if(mysqli_stmt_execute($stmt)){
                 //If we get this far, the user has successfuly registered.
                 //So now we will set isnewuser to TRUE in the database, to display the welcomenewuser.php page
-                $sql = "INSERT INTO isnewuser VALUES (?)";
+                $sql = "INSERT INTO users isnewuser VALUES (?)";
 
                 if ($stmt = mysqli_prepare($link, $sql)) {
                     //Bind data to the prepared statement as parameters
