@@ -97,7 +97,10 @@ $tmpusername = $_POST["username"];
                 $isnew = "1";
 
                 if (mysqli_stmt_execute($stmt)) {
-                    header("location: login.php");
+                    $result = mysqli_stmt_get_result($stmt);
+                    echo "Result of mysqli_stmt_execute(): " . $result;
+
+                    //DEBUG MODE    header("location: login.php");
                 } else {
                     echo "Something went wrong. Please try again later.";
                 }
