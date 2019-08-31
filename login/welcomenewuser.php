@@ -22,10 +22,10 @@ $username = $_SESSION["username"];
             background-image: url("../icon/welcomenewuserbackground.png");
         }
         h3 {
-            font-color: white;
+            color: white;
         }
         h4 {
-            font-color: white;
+            color: white;
         }
     </style>
 </head>
@@ -39,7 +39,7 @@ $username = $_SESSION["username"];
             <div class="imgcontainer">
                 <br />
                 <img src="../icon/dashboard-apps-icons.png" alt="dashboard-apps" />
-                <p style="font-color: white;">The current web apps</p>
+                <p style="color: white;">The current web apps</p>
                 <br />
             </div>
         <h3>Web apps are designed to be simple and to provide a core function. One of the most important is the <a href="../filestorage/filemanager/filemanager.php">File Manager</a>, which allows files to be managed across any devices within the network.</h3>
