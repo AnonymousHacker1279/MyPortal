@@ -66,7 +66,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $isnewuser = $_SESSION["isnewuser"];
 							
                             //Here we should check if the user is new or not. If they are, then send them to the welcomenewuser.php page
-                                if ($isnewuser == 1) {
+                                if ($isnewuser == "1") {
                                     //Send the user to the special welcome page
                                     header("location: welcomenewuser.php");
                                 } else {
