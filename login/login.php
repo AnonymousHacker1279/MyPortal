@@ -63,9 +63,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
+                            $_SESSION["isnewuser"] = $isnewuser;
 							
                             //Here we should check if the user is new or not. If they are, then send them to the welcomenewuser.php page
-                                if ($_SESSION["isnewuser"] == 1) {
+                                if ($isnewuser == 1) {
                                     //Send the user to the special welcome page
                                     header("location: welcomenewuser.php");
                                 } else {
@@ -127,8 +128,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
             <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
             <br />
-            <p style="text-align:center;"><img src="../slideshow/MyPortal.png"/></p>
         </form>
     </div>    
+    <p style="text-align:center;"><img src="../slideshow/MyPortal.png"/></p>
 </body>
 </html>
