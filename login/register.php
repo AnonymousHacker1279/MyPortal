@@ -87,9 +87,6 @@ $tmpusername = $_POST["username"];
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
-                //Since the user is new, set a SESSION variable so when the log in they see the welcome page for new users
-                $_SESSION["isnewuser"] = "1";
-
                 //Go to the login page
                 header("location: login.php");
             } else {

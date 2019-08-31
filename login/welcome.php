@@ -116,6 +116,7 @@ function showSlides(n) {
 
 </script>
 
+<p style="text-align:right;">New to MyPortal? Get a quick intro <a href="welcomenewuser.php">here.</a></p>
 <p style="text-align:right;">MyPortal Version <?php echo $version; ?></p>
 <p style="text-align:right;"><a href="../about/index.html"><img src="/icon/help24.png" alt="about" style="vertical-align: middle;"/></a>About MyPortal</p>
 

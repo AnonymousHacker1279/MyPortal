@@ -63,16 +63,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
-                            $isnewuser = $_SESSION["isnewuser"];
-							
-                            //Here we should check if the user is new or not. If they are, then send them to the welcomenewuser.php page
-                                if ($isnewuser == "1") {
-                                    //Send the user to the special welcome page
-                                    header("location: welcomenewuser.php");
-                                } else {
-                                    //If not, they can go to the normal welcome page
-                                    header("location: welcome.php");
-                                }
+
+                            //Go to welcome page
+                            header("location: welcome.php");
 
                         } else{
                             // Display an error message if password is not valid

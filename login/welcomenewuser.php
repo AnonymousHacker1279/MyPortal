@@ -39,14 +39,16 @@ $username = $_SESSION["username"];
             <div class="imgcontainer">
                 <br />
                 <img src="../icon/dashboard-apps-icons.png" alt="dashboard-apps" />
-                <p>The current web apps</p>
+                <p style="font-color: white;">The current web apps</p>
                 <br />
             </div>
+        <h3>Web apps are designed to be simple and to provide a core function. One of the most important is the <a href="../filestorage/filemanager/filemanager.php">File Manager</a>, which allows files to be managed across any devices within the network.</h3>
+        <br />
         <h3>MyPortal is constantly being updated, with new features and patches coming frequently. Soon, there will be plenty of web apps that handle most of your day-to-day work.</h3>
         <br />
         <h3>MyPortal is secure, because it only runs within your network. So as long as you keep your network secured and a firewall on, MyPortal is secure!</h3>
         <br />
-        <h4>Are you ready to begin? Click <a href="welcome.php"><h4>here</h4></a>to begin!</h4>
+        <h4>Are you ready to begin? Click <a href="welcome.php">here</a>to begin!</h4>
         <br />
         <p style="text-align:center;"><img src="../slideshow/MyPortal.png" style="width:720px;height:480px;"/></p>
     </div>
