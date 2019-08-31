@@ -145,6 +145,6 @@ $tmpusername = $_POST["username"];
             <br />
         </form>
     </div>    
-    <p style="text-align:center;"><img src="../slideshow/MyPortal.png"/></p>
+    <p style="text-align:center;"><img src="../slideshow/MyPortal.png" style="width:720px;height:480px;"/></p>
 </body>
 </html>

@@ -21,6 +21,12 @@ $username = $_SESSION["username"];
         body {
             background-image: url("../icon/welcomenewuserbackground.png");
         }
+        h3 {
+            font-color: white;
+        }
+        h4 {
+            font-color: white;
+        }
     </style>
 </head>
 <body>
@@ -42,7 +48,7 @@ $username = $_SESSION["username"];
         <br />
         <h4>Are you ready to begin? Click <a href="welcome.php"><h4>here</h4></a>to begin!</h4>
         <br />
-        <p style="text-align:center;"><img src="../slideshow/MyPortal.png"/></p>
+        <p style="text-align:center;"><img src="../slideshow/MyPortal.png" style="width:720px;height:480px;"/></p>
     </div>
 </body>
 </html>

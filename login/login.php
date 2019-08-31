@@ -63,7 +63,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
-                            $_SESSION["isnewuser"] = $isnewuser;
+                            $isnewuser = $_SESSION["isnewuser"];
 							
                             //Here we should check if the user is new or not. If they are, then send them to the welcomenewuser.php page
                                 if ($isnewuser == 1) {
@@ -130,6 +130,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <br />
         </form>
     </div>    
-    <p style="text-align:center;"><img src="../slideshow/MyPortal.png"/></p>
+    <p style="text-align:center;"><img src="../slideshow/MyPortal.png" style="width:720px;height:480px;"/></p>
 </body>
 </html>
