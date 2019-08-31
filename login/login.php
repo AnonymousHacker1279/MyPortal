@@ -65,23 +65,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["username"] = $username;
 							
                             //Here we should check if the user is new or not. If they are, then send them to the welcomenewuser.php page
-
-                                //Prepare a SELECT statement
-                                $sql = "SELECT isnewuser FROM users WHERE id='$id'";
-
-                                //If the result returned is equal to one, they are a new user
-                                if (mysqli_query($link, $sql) == '1') {
-                                    //If they are new, go to the welcomenewuser.php page
-                                    //However, we need to set the isnewuser value to FALSE again, or else they will see this every time
-                                    $sql = "UPDATE users SET isnewuser='0' WHERE id='$id'";
-
-                                    if (mysqli_query($link, $sql)) {
-                                        //If it worked, then the user won't see the special welcome after this.
-                                        header("location: welcomenewuser.php");
-                                    } else {
-                                        echo "Error updating record: " . mysqli_error($link);
-                                    }
-
+                                if ($_SESSION["isnewuser"] == 1) {
+                                    //Send the user to the special welcome page
+                                    header("location: welcomenewuser.php");
                                 } else {
                                     //If not, they can go to the normal welcome page
                                     header("location: welcome.php");
@@ -124,7 +110,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <body>
     <div class="wrapper">
         <h2>Login to MyPortal</h2>
-        <p>Please fill in your credentials to login.</p>
+        <p>Please enter your login credentials to proceed.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                 <label>Username</label>
@@ -140,6 +126,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input type="submit" class="btn btn-primary" value="Login">
             </div>
             <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
+            <br />
+            <p style="text-align:center;"><img src="../slideshow/MyPortal.png"/></p>
         </form>
     </div>    
 </body>

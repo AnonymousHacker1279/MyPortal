@@ -87,21 +87,11 @@ $tmpusername = $_POST["username"];
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
-                //If we get this far, the user has successfuly registered.
-                //So now we will set isnewuser to TRUE in the database, to display the welcomenewuser.php page
+                //Since the user is new, set a SESSION variable so when the log in they see the welcome page for new users
+                $_SESSION["isnewuser"] = 1;
 
-                //Get ID of last inserted record (when the user made their account)
-                $last_inserted_id = mysqli_insert_id($link);
-
-                //Prepare select statement
-                $sql = "INSERT INTO users isnewuser VALUES ('1') WHERE id='$last_inserted_id'";
-
-                if (mysqli_query($link, $sql)) {
-                    //Redirect the user to the login page
-                    header("location: login.php");
-                } else {
-                    echo "Something went wrong. Please try again later.";
-                } 
+                //Go to the login page
+                header("location: login.php");
             } else {
                 echo "Something went wrong. Please try again later.";
            }
@@ -129,8 +119,8 @@ $tmpusername = $_POST["username"];
 </head>
 <body>
     <div class="wrapper">
-        <h2>Sign Up</h2>
-        <p>Please fill this form to create an account.</p>
+        <h2>Sign Up for MyPortal</h2>
+        <p>Please fill this form to create an account with MyPortal.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                 <label>Username</label>
@@ -152,6 +142,8 @@ $tmpusername = $_POST["username"];
                 <input type="reset" class="btn btn-default" value="Reset">
             </div>
             <p>Already have an account? <a href="login.php">Login here</a>.</p>
+            <br />
+            <p style="text-align:center;"><img src="../slideshow/MyPortal.png"/></p>
         </form>
     </div>    
 </body>
