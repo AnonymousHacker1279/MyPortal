@@ -87,8 +87,9 @@ $tmpusername = $_POST["username"];
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
-		header ("location: login.php");
-            } else{
+                //Go to the login page
+                header("location: login.php");
+            } else {
                 echo "Something went wrong. Please try again later.";
            }
         }
@@ -115,8 +116,8 @@ $tmpusername = $_POST["username"];
 </head>
 <body>
     <div class="wrapper">
-        <h2>Sign Up</h2>
-        <p>Please fill this form to create an account.</p>
+        <h2>Sign Up for MyPortal</h2>
+        <p>Please fill this form to create an account with MyPortal.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                 <label>Username</label>
@@ -138,7 +139,9 @@ $tmpusername = $_POST["username"];
                 <input type="reset" class="btn btn-default" value="Reset">
             </div>
             <p>Already have an account? <a href="login.php">Login here</a>.</p>
+            <br />
         </form>
     </div>    
+    <p style="text-align:center;"><img src="../slideshow/MyPortal.png" style="width:720px;height:480px;"/></p>
 </body>
 </html>

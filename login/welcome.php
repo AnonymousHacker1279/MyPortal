@@ -25,11 +25,11 @@ fclose($version);
 		<div class="centered" style="font-size:50px">Welcome to MyPortal, <?php echo $username; ?></div>
     </div>
 
-	<ul>
-		<li><a href="welcome.php">Home</a></li>
-		<li><a href="/dashboard/dashboard.php">Dashboard</a></li>
-		<li style="float:right"><a href="logout.php"><img src="/icon/logout.png" alt="logout" style="vertical-align:middle"/>Log Out</a></li>
-		<li style="float:right"><a href="../accountdetails.php">Account</a></li>
+	<ul class="NavBar">
+		<li class="NavBarItem"><a href="welcome.php">Home</a></li>
+		<li class="NavBarItem"><a href="/dashboard/dashboard.php">Dashboard</a></li>
+		<li class="NavBarItem" style="float:right"><a href="logout.php"><img src="/icon/logout.png" alt="logout" style="vertical-align:middle"/>Log Out</a></li>
+		<li class="NavBarItem" style="float:right"><a href="../accountdetails.php">Account</a></li>
 	</ul>
 
 	<br />
@@ -116,6 +116,7 @@ function showSlides(n) {
 
 </script>
 
+<p style="text-align:right;">New to MyPortal? Get a quick intro <a href="welcomenewuser.php">here.</a></p>
 <p style="text-align:right;">MyPortal Version <?php echo $version; ?></p>
 <p style="text-align:right;"><a href="../about/index.html"><img src="/icon/help24.png" alt="about" style="vertical-align: middle;"/></a>About MyPortal</p>
 

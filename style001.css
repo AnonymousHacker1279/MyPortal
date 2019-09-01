@@ -15,6 +15,7 @@ h3 {
 
 h4 {
     font-family:Arial, Helvetica, sans-serif;
+    color: black;
 }
 
 p {
@@ -44,7 +45,7 @@ p {
     display:block;
 }
 
-ul {
+.NavBar {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -52,7 +53,7 @@ ul {
     background-color: #333;
 }
 
-li {
+.NavBarItem {
     float: left;
 }
 
@@ -218,4 +219,9 @@ a {
     to {
         opacity: 1
     }
+}
+
+.imgcontainer {
+    padding: 3px;
+    background-color: rgb(34, 31, 31);
 }

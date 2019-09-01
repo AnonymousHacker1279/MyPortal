@@ -63,10 +63,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
-							
-                            
-                            // Redirect user to welcome page
+
+                            //Go to welcome page
                             header("location: welcome.php");
+
                         } else{
                             // Display an error message if password is not valid
                             $password_err = "No account found with that username/password combination.";
@@ -104,7 +104,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <body>
     <div class="wrapper">
         <h2>Login to MyPortal</h2>
-        <p>Please fill in your credentials to login.</p>
+        <p>Please enter your login credentials to proceed.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                 <label>Username</label>
@@ -120,7 +120,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input type="submit" class="btn btn-primary" value="Login">
             </div>
             <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
+            <br />
         </form>
     </div>    
+    <p style="text-align:center;"><img src="../slideshow/MyPortal.png" style="width:720px;height:480px;"/></p>
 </body>
 </html>
