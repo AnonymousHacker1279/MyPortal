@@ -26,7 +26,7 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
     <script src="ckeditor/samples/js/sample.js"></script>
     <link rel="stylesheet" href="ckeditor/samples/css/samples.css">
     <link rel="stylesheet" href="ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
 </head>
 <body id="main">

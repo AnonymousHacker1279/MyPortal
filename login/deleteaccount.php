@@ -16,6 +16,7 @@ $id = $_SESSION['id'];
 <html>
 <head>
 	<title>Delete Account</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../style001.css">
 	<script>
 		function MoveToAccountDeleteBackend() {

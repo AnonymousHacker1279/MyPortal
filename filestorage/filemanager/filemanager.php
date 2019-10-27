@@ -33,6 +33,7 @@ include_once('class/FileManager.php');
 <html>
 <head>
 <title>File Manager</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="fmBody">
 <table border="0" style="width:100%; height:100%"><tr>

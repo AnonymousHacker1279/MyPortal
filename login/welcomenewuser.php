@@ -16,6 +16,7 @@ $username = $_SESSION["username"];
 <html>
 <head>
     <title>Welcome to MyPortal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style001.css">
     <style>
         body {
