@@ -33,11 +33,11 @@ $username = $_SESSION['username'];
 	<br />
 
 	<div class="container">
-		<ul>
-			<li><a href="/filestorage/filemanager/filemanager.php"><img src="filemanager.png" alt="filemanager" style="vertical-align:middle" />Team File Manager</a></li>
-			<li><a href="/richtexteditor/index.php"><img src="texteditor.png" alt="texteditor" style="vertical-align:middle" />Rich Text Editor</a></li>
-			<li><a href="/code_editor/ace/index.html"><img src="codeeditor.png" alt="code_editor" style="vertical-align:middle" /> Code Editor</a></li>
-			<li><a href="/teamchat/index.php"><img src="teamchat.png" alt="teamchat" style="vertical-align:middle" /> TeamChat</a></li>
+		<ul class="NavBar">
+			<li class="NavBarItem"><a href="/filestorage/filemanager/filemanager.php"><img src="filemanager.png" alt="filemanager" style="vertical-align:middle" />Team File Manager</a></li>
+			<li class="NavBarItem"><a href="/richtexteditor/index.php"><img src="texteditor.png" alt="texteditor" style="vertical-align:middle" />Rich Text Editor</a></li>
+			<li class="NavBarItem"><a href="/code_editor/ace/index.html"><img src="codeeditor.png" alt="code_editor" style="vertical-align:middle" /> Code Editor</a></li>
+			<li class="NavBarItem"><a href="/teamchat/index.php"><img src="teamchat.png" alt="teamchat" style="vertical-align:middle" /> TeamChat</a></li>
 		</ul>
 	</div>
 </body>
