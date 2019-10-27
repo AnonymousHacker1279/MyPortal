@@ -35,26 +35,19 @@ You can do it with the following Rewrite Rules:
 
 Then reload Apache to apply the new settings with ```apachectl graceful```.
 
-# Enable Automatic Updates
-You can enable automatic updates by creating a bash script to pull new code to your server. 
-
-The script can look like this:
-
-    #!/bin/sh
-    cd /var/www/html  # Use your server directory here
-    git pull orgin master
-
-Use ```chmod +x updatescript.sh``` to make it executable
-
-Then you can use a ```crontab``` to make it run automatically.
-
-Using ```crontab``` is very simple and straightforward. Using ```crontab -e``` you can add a new cron job to be scheduled. Go to [this link](https://www.pantz.org/software/cron/croninfo.html) 
-for cron examples and syntax.
-
 # Enable Custom Error Pages
-Custom error pages are provided and can be activated using ```.htaccess``` files. The ```.htaccess``` files are provides, and shouldn't need to be edited unless you make new error pages. The three most common errors are provided: HTTP 403, 404, and 500. Please note that some HTTP 500 errors may not display the custom page because PHP pages don't operate with the same codes.
+Custom error pages are provided and can be activated using a ```.htaccess``` file. You need to create a ```.htaccess``` file in the root of your website. Within that file, you can place the following code in the ```.htaccess``` file to redirect users upon certain HTTP codes.
 
-If you decide to make new pages you must update the ```.htaccess``` files to ensure the user sees the page.
+    ErrorDocument 403 http://SERVERIP/errorpages/403errorpage.html
+    ErrorDocument 404 http://SERVERIP/errorpages/404errorpage.html
+    ErrorDocument 500 http://SERVERIP/errorpages/500errorpage.html
+
+The three most common error pages are provided: HTTP 403, 404, and 500. Please note that some HTTP 500 errors may not display the custom page because PHP pages don't operate with the same codes.
+
+If you decide to make new pages you must update the ```.htaccess``` file to ensure the user sees the page.
+
+# Enable TeamChat Web App
+The TeamChat web application allows all users on a team to send messages instantly. A ScaleDrone API account is needed (Get one [here](https://scaledrone.com).) You need to edit the ```index.php``` file in the ```/teamchat``` folder and paste the key (a comment in the script tells you where to put it). The administrator is the only one that needs to make an API account, and other users will connect to it.
 
 # Suggestions and Issues
 If have your own suggestions, please make a pull request and it may get implemented.
