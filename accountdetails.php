@@ -32,8 +32,8 @@ $username = $_SESSION['username'];
 
 			<h2>Hello, <?php echo $username;?>. What would you like to change today?</h2>
 		</div>
-		<div class="container">
-			<iframe src="accountsettingsmenu.html" class="fill_container"></iframe>
+		<div class="fill_container">
+			<iframe src="accountsettingsmenu.html" width="100%" height="100%" frameborder="0" class="fill_container"></iframe>
 		</div>
 	</body>
 </html>
