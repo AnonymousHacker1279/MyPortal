@@ -113,12 +113,13 @@
 	
 	/*
 
-PLEASE READ THIS! 
-You need a ScaleDrone account to use this! The site administrator only needs to make an account. Once an account is made, create a room and paste your client ID into the space below. Using this ID will result in broken pages and random messages!
+      =====README=====
+      You need to create a ScaleDrone account (www.scaledrone.com) and paste an API key in the space below. 
+      After you make your account, create a new channel to hold the messages and it will give you a key.
 
-  */
+*/
 
-const CLIENT_ID = 'lmBG0vBdiaz7xIMh';
+const CLIENT_ID = '';
 
 
 
@@ -126,7 +127,7 @@ const drone = new ScaleDrone(CLIENT_ID, {
 
   data: { // Will be sent out as clientData via events
 
-    name: getRandomName(),
+    name: <?php echo $username; ?>,
 
     color: getRandomColor(),
 
@@ -231,20 +232,6 @@ drone.on('error', error => {
   console.error(error);
 
 });
-
-
-
-function getRandomName() {
-
-  const adjs = ["<?php echo $username; ?>"];
-
-  return (
-
-    adjs[Math.floor(Math.random() * adjs.length)]
-
-  );
-
-}
 
 
 
