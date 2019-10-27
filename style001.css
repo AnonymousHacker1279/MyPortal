@@ -225,3 +225,10 @@ a {
     padding: 3px;
     background-color: rgb(34, 31, 31);
 }
+
+.fill_container {
+    flex-grow: 1;
+    border: none;
+    margin: 0;
+    padding: 0;
+}

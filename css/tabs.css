@@ -28,6 +28,11 @@ p {
   font-size: 2em;
   margin-bottom: 0.8em;
 }
+h1, h2, h3, p {
+  font-weight: normal;
+  line-height: 1.5;
+  color: rgb(48, 57, 66);
+}
 table.request-response {
   table-layout:fixed;
   width: 100%;
@@ -51,11 +56,6 @@ tabs {
   padding-inline-start: 8px;
 }
 
-/* New users of tabs.css should add 'new-style-tabs' to the class list of any
- * 'tabs' or 'tabpanels' elements.
- *
- * TODO(rfevang): Remove when all users are converted to the new style.
- *                (crbug.com/247772). */
 tabs.new-style-tabs {
   background: #fbfbfb;
   border-bottom: 1px solid #c8c8c8;
