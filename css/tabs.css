@@ -153,3 +153,7 @@ tabpanels > * {
 tabpanels > [selected] {
   display: block;
 }
+.container {
+  position: relative;
+  text-align: center;
+}
