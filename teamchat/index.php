@@ -112,12 +112,10 @@
     <script>
 	
 	/*
-
       =====README=====
       You need to create a ScaleDrone account (www.scaledrone.com) and paste an API key in the space below. 
       After you make your account, create a new channel to hold the messages and it will give you a key.
-
-*/
+  */
 
 const CLIENT_ID = '';
 
@@ -127,7 +125,7 @@ const drone = new ScaleDrone(CLIENT_ID, {
 
   data: { // Will be sent out as clientData via events
 
-    name: <?php echo $username; ?>,
+    name: "<?php echo $username; ?>",
 
     color: getRandomColor(),
 
@@ -232,7 +230,6 @@ drone.on('error', error => {
   console.error(error);
 
 });
-
 
 
 function getRandomColor() {
@@ -356,6 +353,7 @@ function addMessageToListDOM(text, member) {
   }
 
 }
+</script>
 
 </body>
 
