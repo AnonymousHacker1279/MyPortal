@@ -16,13 +16,13 @@ $username = $_SESSION['username'];
 		<title>Your Account</title>
 		<link rel="stylesheet" href="style001.css" />
 		<!--The tab section within this page is based on the Chromium Tab design-->
-		<link rel="stylesheet" href="/css/tabs.css">
-		<script src="/js/promise_resolver.js"></script>
-		<script src="/js/cr.js"></script>
-		<script src="/js/util.js"></script>
-		<script src="/js/ui.js"></script>
-		<script src="/js/focus_outline_manager.js"></script>
-		<script src="/js/tabs.js"></script>
+		<link rel="stylesheet" href="css/tabs.css">
+		<script src="js/promise_resolver.js"></script>
+		<script src="js/cr.js"></script>
+		<script src="js/util.js"></script>
+		<script src="js/ui.js"></script>
+		<script src="js/focus_outline_manager.js"></script>
+		<script src="js/tabs.js"></script>
 	</head>
 	<body>
 
@@ -67,7 +67,7 @@ $username = $_SESSION['username'];
 							</tabpanel>
 						</tabpanels>
 					</tabbox>
-					<script src="/js/load.js"></script>
+					<script src="js/load.js"></script>
 			</div>
 	</body>
 </html>
