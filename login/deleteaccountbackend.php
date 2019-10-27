@@ -23,7 +23,9 @@ if(mysqli_query($link, $sql)) {
  
 	// Destroy the session.
 	session_destroy();
-	header("location: ../index.html");
+	echo '<script>',
+        'window.top.location.reload();',
+        '</script>';
 	exit;
 } else {
 	echo "Did not complete successfuly. ERROR: " . mysqli_error($link);
