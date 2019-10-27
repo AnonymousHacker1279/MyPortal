@@ -16,7 +16,8 @@ fclose($version);
 ?>
 <html>
 <head>
-	<link rel="stylesheet" href="/style001.css">
+  <link rel="stylesheet" href="/style001.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Welcome to MyPortal</title>
 </head>
 <body>
@@ -116,7 +117,7 @@ function showSlides(n) {
 
 </script>
 
-<p style="text-align:right;">New to MyPortal? Get a quick intro <a href="welcomenewuser.php">here.</a></p>
+<p style="text-align:right;">New to MyPortal? See what it does <a href="welcomenewuser.php">here.</a></p>
 <p style="text-align:right;">MyPortal Version <?php echo $version; ?></p>
 <p style="text-align:right;"><a href="../about/index.html"><img src="/icon/help24.png" alt="about" style="vertical-align: middle;"/></a>About MyPortal</p>
 
