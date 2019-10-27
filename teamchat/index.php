@@ -111,9 +111,12 @@
 
     <script>
 	
-	// PS! Replace this with your own channel ID
+	/*
 
-// If you use this channel ID your app will stop working in the future
+PLEASE READ THIS! 
+You need a ScaleDrone account to use this! The site administrator only needs to make an account. Once an account is made, create a room and paste your client ID into the space below. Using this ID will result in broken pages and random messages!
+
+  */
 
 const CLIENT_ID = 'lmBG0vBdiaz7xIMh';
 
