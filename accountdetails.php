@@ -21,7 +21,7 @@ $username = $_SESSION['username'];
 		<div class="container">
 				<img src="/icon/code01.jpg" alt="code01" style="width:100%; height:180px; opacity: 0.4;" />
 				<div class="centered" style="font-size:50px">Your Account</div>
-			</div>
+		</div>
 
 			<ul class="NavBar">
 				<li class="NavBarItem"><a href="/login/welcome.php">Home</a></li>
@@ -31,7 +31,6 @@ $username = $_SESSION['username'];
 			</ul>
 
 			<h2>Hello, <?php echo $username;?>. What would you like to change today?</h2>
-		</div>
 		<div class="fill_container">
 			<iframe src="accountsettingsmenu.html" width="100%" height="100%" frameborder="0" class="fill_container"></iframe>
 		</div>
